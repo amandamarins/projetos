@@ -1,0 +1,13 @@
+@(formCupom: Form[Empresa])
+@import helper._
+ 
+@main("Cadastrar Cupom") {
+  <form action="/cupom/novo" method="POST">
+    @inputText(formCupom("id"), '_label -> "Id")
+    @inputText(formCupom("nome"), '_label -> "Nome")
+    @inputText(formCupom("fantansia"), '_label -> "Fantasia")
+    @inputText(formCupom("cnpj"), '_label -> "Cnpj")
+    @inputText(formCupom("endereco"), '_label -> "Endereco")
+    <input type="submit" value="Criar">
+  </form>
+}
